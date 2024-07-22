@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Diretivas-Templates-Decorators';
+  inputText: string = "Texto passado via Binding";
+  inputType: string = "text";
+  isDisabled: boolean = false;
+
+  public mudarTipoInput() {
+    this.isDisabled = !this.isDisabled;
+  }
 }
