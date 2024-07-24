@@ -48,4 +48,11 @@ export class BindingsComponent {
       backgroundColor: 'purple',
     }
   }
+
+  // =============================================
+// Aula 5: Class Binding
+  isRedButton: boolean = true;
+  isGreenButton: boolean = true;
 }
+
+

@@ -25,12 +25,30 @@
 <!--<button [attr.disabled]="buttonDisable ? true : null"> Desativado? </button>-->
 
 <!-- Aula 4: CSS Binding -->
-<button [style.width]="widthButton1" [style.background-color]="bgColorButton"> Botão 1 </button>
+<!--<button [style.width]="widthButton1" [style.background-color]="bgColorButton"> Botão 1 </button>-->
 
-<button [style.width.px]="widthButton2" [style.background-color]="bgColorButton"> Botão 2 </button>
+<!--<button [style.width.px]="widthButton2" [style.background-color]="bgColorButton"> Botão 2 </button>-->
 
-<button [style]="{width: '150px', backgroundColor: 'orange'}"> Botão 3 </button>
+<!--<button [style]="{width: '150px', backgroundColor: 'orange'}"> Botão 3 </button>-->
 
-<button [style]="stylesObj"> Botão 4 </button>
+<!--<button [style]="stylesObj"> Botão 4 </button>-->
 
-<button (click)="updateStylesObj()"> Mudar Botão 3</button>
+<!--<button (click)="updateStylesObj()"> Mudar Botão 3</button>-->
+
+<!-- Aula 5: Class Binding -->
+<button
+  [class]="{'botao-vermelho': true,'botao-verde': false}"
+> Botão Verde / Vermelho </button>
+
+<button
+  (click)="isGreenButton = true"
+> Botão Verde</button>
+
+<button
+  (click)="isGreenButton = false"
+> Botão Vermelho</button>
+
+<button [class]="{
+  'botao-vermelho': !isGreenButton,
+  'botao-verde': isGreenButton
+}"> Aplicando a cor </button>
