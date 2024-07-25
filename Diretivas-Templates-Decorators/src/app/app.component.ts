@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  cardPlanType: string = "Simples";
+  cardPlanPrice: number = 100;
 }
