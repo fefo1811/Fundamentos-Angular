@@ -3,6 +3,14 @@
 
 <!-- Aula sobre @Input e @Output -->
 <div class="cards-container">
-  <app-card [planType]="cardPlanType" [planPrice]="cardPlanPrice" />
+  <app-card [planType]="cardPlanType" planPrice="1000" />
   <app-card-roxo/>
 </div>
+
+<input
+  #meuInput
+  type="text"
+  placeholder="Digite algo"
+  id="meuInput"
+  (keyup)="handlePlanType(meuInput.value)"
+>
