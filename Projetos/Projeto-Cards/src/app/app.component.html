@@ -1,0 +1,12 @@
+<app-button
+  [textoBotao]="textoBotao1"
+  buttonBgColor="white"
+  (buttonEmitter)="buttonEmitterCatcher($event)"
+  [isDisabled]="true"
+></app-button>
+
+<app-button
+  [textoBotao]="textoBotao2"
+  buttonBgColor="purple"
+  (buttonEmitter)="buttonEmitterCatcher($event)"
+></app-button>

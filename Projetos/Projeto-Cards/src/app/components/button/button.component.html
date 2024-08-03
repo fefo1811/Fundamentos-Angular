@@ -1,0 +1,10 @@
+<button
+  class="button"
+  [class]= "{
+    'button--purple': buttonBgColor === 'purple',
+    'button--white': buttonBgColor === 'white'
+  }"
+  [disabled]="isDisabled"
+
+  (click)="botaoClicado()"
+> {{ textoBotao }} </button>
