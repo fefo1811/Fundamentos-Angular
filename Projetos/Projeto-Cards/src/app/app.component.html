@@ -1,12 +1,27 @@
-<app-button
-  [textoBotao]="textoBotao1"
-  buttonBgColor="white"
-  (buttonEmitter)="buttonEmitterCatcher($event)"
-  [isDisabled]="true"
-></app-button>
+<!--<app-button-->
+<!--  [textoBotao]="textoBotao1"-->
+<!--  buttonBgColor="white"-->
+<!--  (buttonEmitter)="buttonEmitterCatcher($event)"-->
+<!--  [isDisabled]="true"-->
+<!--&gt;</app-button>-->
 
-<app-button
-  [textoBotao]="textoBotao2"
-  buttonBgColor="purple"
-  (buttonEmitter)="buttonEmitterCatcher($event)"
-></app-button>
+<!--<app-button-->
+<!--  [textoBotao]="textoBotao2"-->
+<!--  buttonBgColor="purple"-->
+<!--  (buttonEmitter)="buttonEmitterCatcher($event)"-->
+<!--&gt;</app-button>-->
+
+<div class="cards__container">
+  <app-card
+    [planType]="'Simples'"
+    [planPrice]="100"
+    [cardStyle]="'purple'"
+    (buttonClicked)="onCardButtonClicked()"
+  ></app-card>
+
+  <app-card
+    [planType]="'Felipe'"
+    [planPrice]="200"
+    [cardStyle]="'orange'"
+  ></app-card>
+</div>
