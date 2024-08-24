@@ -1,0 +1,22 @@
+<!-- <div 
+    style="background-color: green;" 
+    *ngIf="minhaProp; else meuTemplate"
+> 
+    Está aparecendo a div 1
+</div>
+
+<ng-template #meuTemplate>
+    <div style="background-color: purple;"> A div 2 apareceu! </div>
+</ng-template> -->
+
+<ng-container *ngIf="minhaProp; then meuTemplate; else outroTemplate"></ng-container>
+
+<ng-template #meuTemplate>
+    <div style="background-color: pink;"> Sou a div then! </div>
+</ng-template>
+
+<ng-template #outroTemplate>
+    <div style="background-color: teal;"> Sou a div else! </div>
+</ng-template>
+
+<button (click)="toggleProp()"> Aparecer / Desaparecer elemento </button>

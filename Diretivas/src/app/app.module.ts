@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { DiretivasComponent } from './components/diretivas/diretivas.component';
+import { TwoWayComponent } from './components/two-way/two-way.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DiretivasComponent,
+    TwoWayComponent
   ],
   imports: [
     BrowserModule,
