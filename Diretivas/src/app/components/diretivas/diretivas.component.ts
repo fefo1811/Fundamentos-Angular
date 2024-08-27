@@ -28,8 +28,8 @@ export class DiretivasComponent {
 
   personSelectedIndex: number | undefined;
 
-  selectPerson(i: number) {
-    console.log(i)
-    this.personSelectedIndex = i;
+  selectPerson(event: number) {
+    console.log(event);
+    this.personSelectedIndex = event;
   }
 }

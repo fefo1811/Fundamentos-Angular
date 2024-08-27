@@ -27,18 +27,17 @@
 
 <h1> Aula sobre a diretiva ngFor </h1>
 <div class="list">
-    <div 
-    class="item" 
-    *ngFor="let person of listPessoas; let i = index; let isOdd = odd; let isFirst = first; let isLast = last"
-    [class.item__odd]="isOdd"
-    [class.item__highlighted]="personSelectedIndex === i"
-    (click)="selectPerson(i)"
->
-        <p class="item__name"> {{ i }} - {{ person.name }} </p>
-        <p class="item__age"> {{ person.age }} anos </p>
-        <p class="item__age" *ngIf="isFirst"> É o primeiro item </p>
-        <p class="item__age" *ngIf="isLast"> É o último item </p>
-    </div>
+    <app-person
+        *ngFor="let pessoa of listPessoas; let i = index; let isOdd = odd; let isFirst = first; let isLast = last; "
+        [name]="pessoa.name"
+        [age]="pessoa.age"
+        [index]="i"
+        [isOdd]="isOdd"
+        [isFirst]="isFirst"
+        [isLast]="isLast"
+        [isSelected]="personSelectedIndex === i"
+        (onPersonSelectEmitt)="selectPerson($event)"
+    ></app-person>
 </div>
 
 <!-- <div *ngFor="let item of listPessoas">
