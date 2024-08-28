@@ -43,3 +43,17 @@
 <!-- <div *ngFor="let item of listPessoas">
     <h1> {{ item }} </h1>
 </div> -->
+
+<hr>
+
+<h1> Aula sobre a diretiva ngStyle </h1>
+
+<h2
+[ngStyle]="{
+    'font-size': fontSize + 'px',
+    'color': textColor,
+}"
+> Sou um H2 !! </h2>
+
+<button (click)="aumentarFontSize()"> Aumentar Fonte H2 </button>
+<button (click)="toggleFontColor()"> {{ buttonText }} </button>

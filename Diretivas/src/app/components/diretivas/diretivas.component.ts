@@ -32,4 +32,23 @@ export class DiretivasComponent {
     console.log(event);
     this.personSelectedIndex = event;
   }
+
+  // ngStyle
+  fontSize: number = 15;
+  textColor: 'black' | 'orange' = 'black';
+  buttonText: 'Preto' | 'Laranja' = 'Laranja'
+
+  aumentarFontSize() {
+    this.fontSize += 5;
+  }
+
+  toggleFontColor() {
+    if( this.textColor === 'black' ) {
+      this.textColor = 'orange';
+      this.buttonText = 'Preto';
+    } else {
+      this.textColor = 'black';
+      this.buttonText = 'Laranja';
+    }
+  } 
 }
