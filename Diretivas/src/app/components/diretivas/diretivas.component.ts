@@ -51,4 +51,30 @@ export class DiretivasComponent {
       this.buttonText = 'Laranja';
     }
   } 
+
+  // ngClass
+  isGreen: boolean = true;
+
+  setToGreen(): void {
+    this.isGreen = true;
+  }
+
+  setToOrange(): void {
+    this.isGreen = false;
+  }
+
+
+  // Aula de Introdução à Pipes
+  texto: string = 'felipe';
+  pessoa = {
+    nome: 'Felipe',
+    idade: 23
+  }
+
+  algumaCoisa = [
+    { nome: 'Felipe', idade: 23 },
+    { nome: 'FE', idade: 23 },
+    { nome: 'Li', idade: 23 },
+    { nome: 'PE', idade: 23 }
+  ]
 }

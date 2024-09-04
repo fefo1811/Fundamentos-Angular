@@ -57,3 +57,24 @@
 
 <button (click)="aumentarFontSize()"> Aumentar Fonte H2 </button>
 <button (click)="toggleFontColor()"> {{ buttonText }} </button>
+
+<hr>
+
+<h1> Aula sobre a diretiva ngClass </h1>
+
+<h2
+    [ngClass]="{
+        'is-big is-green': isGreen,
+        'is-orange': !isGreen
+    }"
+> Sou um h2</h2>
+
+<button (click)="setToGreen()"> Verde </button>
+<button (click)="setToOrange()"> Laranja </button>
+
+<hr>
+
+<h1> Aula de Introdução à Pipes </h1>
+<h3> Pipe de Uppercase {{ texto | uppercase }} </h3>
+<!-- <h3> Pipe de JSON {{ pessoa }} </h3>
+<h3> Pipe de JSON {{ pessoa | json }} </h3> -->
