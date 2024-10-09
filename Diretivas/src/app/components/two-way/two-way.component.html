@@ -6,6 +6,16 @@
 
 <h1> Nome digitado: {{ name }} </h1>
 
+<div *ngIf="isTexto; else meuTesteTemplate ">
+    <h1> Treinando o ngIf com ngTemplate </h1>
+</div>
+
+<ng-template #meuTesteTemplate>
+    <h1> Exibindo o conteúdo do ng-template </h1>
+</ng-template>
+
+<!-- <button (click)="emitir()"> Clique aqui </button> -->
+
 <!-- [ngModel]="name"                            <--- Input
 (ngModelChange)="handleInputChange($event)"      <--- Output 
 -->  
